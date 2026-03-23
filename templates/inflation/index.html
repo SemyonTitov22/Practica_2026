@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика Росстата | Claude Style</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inflation/style.css' %}">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Статистика Росстата</h1>
+            <p class="lead">Актуальные данные по экономике и социальной сфере Москвы</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Карточка 1: Инфляция -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Инфляция в России</h5>
+                        <p class="card-text">Индекс потребительских цен по месяцам и годам. Ежемесячная и годовая инфляция.</p>
+                        <ul class="list-unstyled">
+                            <li>Помесячные данные</li>
+                            <li>Годовая инфляция</li>
+                            <li>Динамика за 2000-2026 гг.</li>
+                        </ul>
+                        <a href="/inflation/" class="btn btn-primary mt-2">Перейти к инфляции →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2: Доходы и расходы -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Доходы и расходы</h5>
+                        <p class="card-text">Динамика денежных доходов и расходов жителей г. Москвы.</p>
+                        <ul class="list-unstyled">
+                            <li>Денежные доходы</li>
+                            <li>Социальные выплаты</li>
+                            <li>Потребительские расходы</li>
+                            <li>Обязательные платежи</li>
+                        </ul>
+                        <a href="/income/" class="btn btn-success mt-2">Перейти к доходам →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3: Доля населения -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Доля населения</h5>
+                        <p class="card-text">Доля населения с доходами ниже границы бедности в г. Москве.</p>
+                        <ul class="list-unstyled">
+                            <li>Годовые показатели</li>
+                            <li>Динамика по годам</li>
+                        </ul>
+                        <a href="/income-share/" class="btn btn-warning mt-2">Перейти к показателю →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4: Заболеваемость -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Заболеваемость</h5>
+                        <p class="card-text">Заболеваемость по основным классам болезней в г. Москве.</p>
+                        <ul class="list-unstyled">
+                            <li>Абсолютные значения</li>
+                            <li>На 1000 человек</li>
+                            <li>Динамика по годам</li>
+                        </ul>
+                        <a href="/disease/" class="btn btn-info mt-2">Перейти к заболеваемости →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 5: Медицинские кадры -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Медицинские кадры</h5>
+                        <p class="card-text">Численность врачей и среднего медицинского персонала.</p>
+                        <ul class="list-unstyled">
+                            <li>Врачи (абс. и на 10000)</li>
+                            <li>Средний медперсонал (абс. и на 10000)</li>
+                            <li>Динамика по годам</li>
+                        </ul>
+                        <a href="/medical/" class="btn btn-secondary mt-2">Перейти к медицине →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>О сервисе</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Данный сервис автоматически собирает актуальные статистические данные с официального сайта <strong>Росстата (Мосстат)</strong>.</p>
+                        <p>Для каждого раздела доступны:</p>
+                        <ul>
+                            <li><strong>Получение данных</strong> — ручной запуск парсера для загрузки свежих данных</li>
+                            <li><strong>Просмотр данных</strong> — табличное представление с возможностью фильтрации</li>
+                        </ul>
+                        <p class="text-muted mb-0">Данные обновляются по мере выхода новых отчетов на сайте Росстата</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
